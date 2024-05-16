@@ -78,6 +78,25 @@
             text-decoration: underline;
         }
     </style>
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ระบบขอลางาน</title>
+    <style>
+        /* สไตล์ CSS ของคุณอยู่ที่นี่ */
+    </style>
+</head>
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ระบบขอลางาน</title>
+    <style>
+        /* สไตล์ CSS ของคุณอยู่ที่นี่ */
+    </style>
 </head>
 <body>
     <div class="container">
@@ -99,47 +118,22 @@
                 <option value="weekly">ลาประจำสัปดาห์</option>
             </select>
             
-            <label for="start-date">วันที่เริ่มต้น:</label>
-            <input type="date" id="start-date" name="start-date" required>
+            <label for="start-date-time">วันที่และเวลาเริ่มต้น:</label>
+            <input type="datetime-local" id="start-date-time" name="start-date-time">
             
-            <label for="start-time">เวลาเริ่มต้น:</label>
-            <input type="time" id="start-time" name="start-time" required>
-            
-            <label for="end-date">วันที่สิ้นสุด:</label>
-            <input type="date" id="end-date" name="end-date" required>
-            
-            <label for="end-time">เวลาสิ้นสุด:</label>
-            <input type="time" id="end-time" name="end-time" required>
+            <label for="end-date-time">วันที่และเวลาสิ้นสุด:</label>
+            <input type="datetime-local" id="end-date-time" name="end-date-time">
             
             <label for="reason">เหตุผล:</label>
-            <textarea id="reason" name="reason" rows="4" required></textarea>
+            <textarea id="reason" name="reason" rows="4"></textarea>
             
             <button type="submit">ส่งคำขอ</button>
         </form>
         <p>สำหรับข้อมูลเพิ่มเติม <a href="https://www.example.com" target="_blank">คลิกที่นี่</a></p>
     </div>
     <script>
-        document.getElementById('leave-form').addEventListener('submit', function(e) {
-            e.preventDefault();
-
-            const name = document.getElementById('name').value;
-            const leaveType = document.getElementById('leave-type').value;
-            const startDate = document.getElementById('start-date').value;
-            const startTime = document.getElementById('start-time').value;
-            const endDate = document.getElementById('end-date').value;
-            const endTime = document.getElementById('end-time').value;
-            const reason = document.getElementById('reason').value;
-
-            console.log('ชื่อ:', name);
-            console.log('ประเภทการลา:', leaveType);
-            console.log('วันที่เริ่มต้น:', startDate);
-            console.log('เวลาเริ่มต้น:', startTime);
-            console.log('วันที่สิ้นสุด:', endDate);
-            console.log('เวลาสิ้นสุด:', endTime);
-            console.log('เหตุผล:', reason);
-
-            alert('ส่งคำขอเรียบร้อยแล้ว');
-        });
+        // JavaScript ของคุณอยู่ที่นี่
     </script>
 </body>
 </html>
+
