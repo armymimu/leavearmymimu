@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ระบบขอลางาน</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .container {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            width: 300px;
+        }
+
+        h1 {
+            text-align: center;
+            color: #333;
+        }
+
+        form {
+            display: flex;
+            flex-direction: column;
+        }
+
+        label {
+            margin-bottom: 5px;
+            color: #333;
+        }
+
+        input, select, textarea {
+            margin-bottom: 15px;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            box-sizing: border-box;
+        }
+
+        button {
+            padding: 10px 20px;
+            background-color: #007bff;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+            font-weight: bold;
+            transition: background-color 0.3s, box-shadow 0.3s;
+        }
+
+        button:hover {
+            background-color: #0056b3;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+        }
+
+        button:active {
+            background-color: #004080;
+            box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+        }
+
+        a {
+            color: #007bff;
+            text-decoration: none;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>ระบบขอลางาน</h1>
+        <form id="leave-form">
+            <label for="name">ชื่อ:</label>
+            <select id="name" name="name" required>
+                <option value="พลอย">พลอย</option>
+                <option value="น้ำหวาน">น้ำหวาน</option>
+                <option value="มุก">มุก</option>
+                <option value="เค้ก">เค้ก</option>
+            </select>
+            
+            <label for="leave-type">ประเภทการลา:</label>
+            <select id="leave-type" name="leave-type" required>
+                <option value="sick">ลาป่วย</option>
+                <option value="vacation">ลาพักร้อน</option>
+                <option value="personal">ลากิจ</option>
+                <option value="weekly">ลาประจำสัปดาห์</option>
+            </select>
+            
+            <label for="start-date">วันที่เริ่มต้น:</label>
+            <input type="date" id="start-date" name="start-date" required>
+            
+            <label for="start-time">เวลาเริ่มต้น:</label>
+            <input type="time" id="start-time" name="start-time" required>
+            
+            <label for="end-date">วันที่สิ้นสุด:</label>
+            <input type="date" id="end-date" name="end-date" required>
+            
+            <label for="end-time">เวลาสิ้นสุด:</label>
+            <input type="time" id="end-time" name="end-time" required>
+            
+            <label for="reason">เหตุผล:</label>
+            <textarea id="reason" name="reason" rows="4" required></textarea>
+            
+            <button type="submit">ส่งคำขอ</button>
+        </form>
+        <p>สำหรับข้อมูลเพิ่มเติม <a href="https://www.example.com" target="_blank">คลิกที่นี่</a></p>
+    </div>
+    <script>
+        document.getElementById('leave-form').addEventListener('submit', function(e) {
+            e.preventDefault();
+
+            const name = document.getElementById('name').value;
+            const leaveType = document.getElementById('leave-type').value;
+            const startDate = document.getElementById('start-date').value;
+            const startTime = document.getElementById('start-time').value;
+            const endDate = document.getElementById('end-date').value;
+            const endTime = document.getElementById('end-time').value;
+            const reason = document.getElementById('reason').value;
+
+            console.log('ชื่อ:', name);
+            console.log('ประเภทการลา:', leaveType);
+            console.log('วันที่เริ่มต้น:', startDate);
+            console.log('เวลาเริ่มต้น:', startTime);
+            console.log('วันที่สิ้นสุด:', endDate);
+            console.log('เวลาสิ้นสุด:', endTime);
+            console.log('เหตุผล:', reason);
+
+            alert('ส่งคำขอเรียบร้อยแล้ว');
+        });
+    </script>
+</body>
+</html>
